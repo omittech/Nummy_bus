@@ -44,6 +44,12 @@
 		5D8EB9631B8D625500C717DD /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9451B8D625500C717DD /* TransitionManager.swift */; };
 		5D8EB9641B8D625500C717DD /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9461B8D625500C717DD /* TransitionZoom.swift */; };
 		5D8EB9651B8D625500C717DD /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9471B8D625500C717DD /* UnwindSegue.swift */; };
+		CA5D06291B9BF418002D94FC /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5D06281B9BF418002D94FC /* Photo.storyboard */; };
+		CA5D062D1B9BF480002D94FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D062C1B9BF480002D94FC /* Photo.swift */; };
+		CA5D062F1B9BF4B5002D94FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */; };
+		CA5D06311B9BF4E0002D94FC /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D06301B9BF4E0002D94FC /* Photos.framework */; };
+		CA5D06331B9BF531002D94FC /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D06321B9BF531002D94FC /* PhotoCell.swift */; };
+		CA5D06351B9BF562002D94FC /* AddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +105,12 @@
 		5D8EB9451B8D625500C717DD /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		5D8EB9461B8D625500C717DD /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		5D8EB9471B8D625500C717DD /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		CA5D06281B9BF418002D94FC /* Photo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Photo.storyboard; path = PhotoModule/Photo.storyboard; sourceTree = "<group>"; };
+		CA5D062C1B9BF480002D94FC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = PhotoModule/Photo.swift; sourceTree = "<group>"; };
+		CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = PhotoModule/PhotoViewController.swift; sourceTree = "<group>"; };
+		CA5D06301B9BF4E0002D94FC /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		CA5D06321B9BF531002D94FC /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = PhotoModule/PhotoCell.swift; sourceTree = "<group>"; };
+		CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPhotoCell.swift; path = PhotoModule/AddPhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5D06311B9BF4E0002D94FC /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +135,7 @@
 		5D3FC3941B8125E4005CDE76 = {
 			isa = PBXGroup;
 			children = (
+				CA5D06301B9BF4E0002D94FC /* Photos.framework */,
 				5D3FC39F1B8125E4005CDE76 /* Nummy_Bus */,
 				5D3FC3B81B8125E5005CDE76 /* Nummy_BusTests */,
 				5D3FC39E1B8125E4005CDE76 /* Products */,
@@ -140,6 +154,7 @@
 		5D3FC39F1B8125E4005CDE76 /* Nummy_Bus */ = {
 			isa = PBXGroup;
 			children = (
+				CA5D06271B9BF391002D94FC /* PhotoModule */,
 				5D8EB9281B8D625500C717DD /* Spring */,
 				5D3FC3A21B8125E4005CDE76 /* AppDelegate.swift */,
 				5D3FC3A71B8125E4005CDE76 /* ViewController.swift */,
@@ -213,6 +228,18 @@
 				5D8EB9471B8D625500C717DD /* UnwindSegue.swift */,
 			);
 			path = Spring;
+			sourceTree = "<group>";
+		};
+		CA5D06271B9BF391002D94FC /* PhotoModule */ = {
+			isa = PBXGroup;
+			children = (
+				CA5D062C1B9BF480002D94FC /* Photo.swift */,
+				CA5D06281B9BF418002D94FC /* Photo.storyboard */,
+				CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */,
+				CA5D06321B9BF531002D94FC /* PhotoCell.swift */,
+				CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */,
+			);
+			name = PhotoModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +327,7 @@
 				5D3FC3B01B8125E4005CDE76 /* LaunchScreen.xib in Resources */,
 				5D3FC3AD1B8125E4005CDE76 /* Images.xcassets in Resources */,
 				5D8EB9571B8D625500C717DD /* LoadingView.xib in Resources */,
+				CA5D06291B9BF418002D94FC /* Photo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +361,14 @@
 				5D8EB94F1B8D625500C717DD /* DesignableTabBarController.swift in Sources */,
 				5D8EB94C1B8D625500C717DD /* DesignableButton.swift in Sources */,
 				5D3FC3A31B8125E4005CDE76 /* AppDelegate.swift in Sources */,
+				CA5D06351B9BF562002D94FC /* AddPhotoCell.swift in Sources */,
+				CA5D062D1B9BF480002D94FC /* Photo.swift in Sources */,
 				5D8EB9501B8D625500C717DD /* DesignableTextField.swift in Sources */,
 				5D8EB95E1B8D625500C717DD /* SpringLabel.swift in Sources */,
 				5D8EB9481B8D625500C717DD /* AsyncButton.swift in Sources */,
 				5D8EB9491B8D625500C717DD /* AsyncImageView.swift in Sources */,
 				5D8EB9621B8D625500C717DD /* SwiftyJSON.swift in Sources */,
+				CA5D06331B9BF531002D94FC /* PhotoCell.swift in Sources */,
 				5D8EB9511B8D625500C717DD /* DesignableTextView.swift in Sources */,
 				5D8EB9641B8D625500C717DD /* TransitionZoom.swift in Sources */,
 				5D8EB9611B8D625500C717DD /* SpringView.swift in Sources */,
@@ -348,6 +379,7 @@
 				5D8EB95B1B8D625500C717DD /* SpringAnimation.swift in Sources */,
 				5D8EB94D1B8D625500C717DD /* DesignableImageView.swift in Sources */,
 				5D3FC3A61B8125E4005CDE76 /* Nummy_Bus.xcdatamodeld in Sources */,
+				CA5D062F1B9BF4B5002D94FC /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
