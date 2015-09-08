@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        var storyboard = UIStoryboard(name: "Photo", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("PhotoList") as! UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

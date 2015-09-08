@@ -50,6 +50,8 @@
 		CA5D06311B9BF4E0002D94FC /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D06301B9BF4E0002D94FC /* Photos.framework */; };
 		CA5D06331B9BF531002D94FC /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D06321B9BF531002D94FC /* PhotoCell.swift */; };
 		CA5D06351B9BF562002D94FC /* AddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */; };
+		CA7CE0E01B9DF5100082742A /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7CE0DF1B9DF5100082742A /* add.png */; };
+		CA7CE0E21B9DF61F0082742A /* FoodImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA7CE0E11B9DF61F0082742A /* FoodImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		CA5D06301B9BF4E0002D94FC /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		CA5D06321B9BF531002D94FC /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = PhotoModule/PhotoCell.swift; sourceTree = "<group>"; };
 		CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPhotoCell.swift; path = PhotoModule/AddPhotoCell.swift; sourceTree = "<group>"; };
+		CA7CE0DF1B9DF5100082742A /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		CA7CE0E11B9DF61F0082742A /* FoodImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FoodImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		CA5D06271B9BF391002D94FC /* PhotoModule */ = {
 			isa = PBXGroup;
 			children = (
+				CA7CE0DE1B9DF4EB0082742A /* TestImages */,
 				CA5D062C1B9BF480002D94FC /* Photo.swift */,
 				CA5D06281B9BF418002D94FC /* Photo.storyboard */,
 				CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */,
@@ -240,6 +245,15 @@
 				CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */,
 			);
 			name = PhotoModule;
+			sourceTree = "<group>";
+		};
+		CA7CE0DE1B9DF4EB0082742A /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				CA7CE0E11B9DF61F0082742A /* FoodImage.jpg */,
+				CA7CE0DF1B9DF5100082742A /* add.png */,
+			);
+			name = TestImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +336,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7CE0E01B9DF5100082742A /* add.png in Resources */,
 				5D8EB9541B8D625500C717DD /* Info.plist in Resources */,
 				5D3FC3AB1B8125E4005CDE76 /* Main.storyboard in Resources */,
 				5D3FC3B01B8125E4005CDE76 /* LaunchScreen.xib in Resources */,
 				5D3FC3AD1B8125E4005CDE76 /* Images.xcassets in Resources */,
 				5D8EB9571B8D625500C717DD /* LoadingView.xib in Resources */,
 				CA5D06291B9BF418002D94FC /* Photo.storyboard in Resources */,
+				CA7CE0E21B9DF61F0082742A /* FoodImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
