@@ -105,8 +105,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         println("abc")
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         // Load images from core data.
         println("Start loading images...")
         var error: NSError?
