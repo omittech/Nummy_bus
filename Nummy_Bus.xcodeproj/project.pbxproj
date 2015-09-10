@@ -44,6 +44,8 @@
 		5D8EB9631B8D625500C717DD /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9451B8D625500C717DD /* TransitionManager.swift */; };
 		5D8EB9641B8D625500C717DD /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9461B8D625500C717DD /* TransitionZoom.swift */; };
 		5D8EB9651B8D625500C717DD /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB9471B8D625500C717DD /* UnwindSegue.swift */; };
+		CA0F3F451BA1DFF40038E6BF /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F3F441BA1DFF40038E6BF /* FullImageViewController.swift */; };
+		CA0F3F481BA1E4800038E6BF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0F3F471BA1E4800038E6BF /* Login.storyboard */; };
 		CA5D06291B9BF418002D94FC /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5D06281B9BF418002D94FC /* Photo.storyboard */; };
 		CA5D062D1B9BF480002D94FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D062C1B9BF480002D94FC /* Photo.swift */; };
 		CA5D062F1B9BF4B5002D94FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */; };
@@ -107,6 +109,8 @@
 		5D8EB9451B8D625500C717DD /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		5D8EB9461B8D625500C717DD /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		5D8EB9471B8D625500C717DD /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		CA0F3F441BA1DFF40038E6BF /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullImageViewController.swift; path = PhotoModule/FullImageViewController.swift; sourceTree = "<group>"; };
+		CA0F3F471BA1E4800038E6BF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = LoginModule/Login.storyboard; sourceTree = "<group>"; };
 		CA5D06281B9BF418002D94FC /* Photo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Photo.storyboard; path = PhotoModule/Photo.storyboard; sourceTree = "<group>"; };
 		CA5D062C1B9BF480002D94FC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = PhotoModule/Photo.swift; sourceTree = "<group>"; };
 		CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = PhotoModule/PhotoViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		5D3FC39F1B8125E4005CDE76 /* Nummy_Bus */ = {
 			isa = PBXGroup;
 			children = (
+				CA0F3F461BA1E4130038E6BF /* LoginModule */,
 				CA5D06271B9BF391002D94FC /* PhotoModule */,
 				5D8EB9281B8D625500C717DD /* Spring */,
 				5D3FC3A21B8125E4005CDE76 /* AppDelegate.swift */,
@@ -234,12 +239,21 @@
 			path = Spring;
 			sourceTree = "<group>";
 		};
+		CA0F3F461BA1E4130038E6BF /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				CA0F3F471BA1E4800038E6BF /* Login.storyboard */,
+			);
+			name = LoginModule;
+			sourceTree = "<group>";
+		};
 		CA5D06271B9BF391002D94FC /* PhotoModule */ = {
 			isa = PBXGroup;
 			children = (
 				CA7CE0DE1B9DF4EB0082742A /* TestImages */,
 				CA5D062C1B9BF480002D94FC /* Photo.swift */,
 				CA5D06281B9BF418002D94FC /* Photo.storyboard */,
+				CA0F3F441BA1DFF40038E6BF /* FullImageViewController.swift */,
 				CA5D062E1B9BF4B5002D94FC /* PhotoViewController.swift */,
 				CA5D06321B9BF531002D94FC /* PhotoCell.swift */,
 				CA5D06341B9BF562002D94FC /* AddPhotoCell.swift */,
@@ -344,6 +358,7 @@
 				5D8EB9571B8D625500C717DD /* LoadingView.xib in Resources */,
 				CA5D06291B9BF418002D94FC /* Photo.storyboard in Resources */,
 				CA7CE0E21B9DF61F0082742A /* FoodImage.jpg in Resources */,
+				CA0F3F481BA1E4800038E6BF /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +405,7 @@
 				5D8EB9611B8D625500C717DD /* SpringView.swift in Sources */,
 				5D8EB9601B8D625500C717DD /* SpringTextView.swift in Sources */,
 				5D8EB9551B8D625500C717DD /* KeyboardLayoutConstraint.swift in Sources */,
+				CA0F3F451BA1DFF40038E6BF /* FullImageViewController.swift in Sources */,
 				5D8EB95C1B8D625500C717DD /* SpringButton.swift in Sources */,
 				5D8EB9631B8D625500C717DD /* TransitionManager.swift in Sources */,
 				5D8EB95B1B8D625500C717DD /* SpringAnimation.swift in Sources */,

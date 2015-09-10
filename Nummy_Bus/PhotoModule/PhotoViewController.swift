@@ -10,6 +10,9 @@ import UIKit
 import Photos
 import CoreData
 
+
+var testImage: UIImage? = UIImage(named: "FoodImage.jpg")
+
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -30,16 +33,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     // Define the collection view.
     @IBOutlet var photoList: UICollectionView!
-    
-    /*func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
-        println("Selected one image!")
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        // Save the image user selected into core data.
-        saveImage(image)
-
-    }*/
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -102,7 +95,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
-        println("abc")
     }
     
     override func viewWillAppear(animated: Bool) {
