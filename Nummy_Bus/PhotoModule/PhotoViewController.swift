@@ -15,6 +15,31 @@ var testImage: UIImage? = UIImage(named: "FoodImage.jpg")
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var itemName: UITextField!
+    @IBOutlet var itemPrice: UITextField!
+    @IBOutlet var note: UITextView!
+    
+    @IBAction func backBtn(sender: AnyObject) {
+        // Cancel this page.
+    }
+
+    @IBAction func chefBtn(sender: AnyObject) {
+        //
+    }
+    @IBAction func addToMenuBtn(sender: AnyObject) {
+        // Get the description of the entity.
+        let DishDescription = NSEntityDescription.entityForName("Dish", inManagedObjectContext: moContext!)
+        
+        // Create the Managed Object to be inserted into the CoreData.
+        let dish = Dish(entity: DishDescription!, insertIntoManagedObjectContext: moContext!)
+        
+        dish.dName = itemName.text
+        dish.dPrice = itemPrice.text
+        dish.dNote = note.text
+        println("Dish saved!")
+    }
+    
+    
     let moContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var photos = [Photo]()
