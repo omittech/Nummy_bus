@@ -13,7 +13,7 @@ import CoreData
 
 var testImage: UIImage? = UIImage(named: "FoodImage.jpg")
 
-class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var itemName: UITextField!
     @IBOutlet var itemPrice: UITextField!
@@ -36,7 +36,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         dish.dName = itemName.text
         dish.dPrice = itemPrice.text
         dish.dNote = note.text
-        println("Dish saved!")
+        NSLog("Dish saved!")
     }
     
     
@@ -61,13 +61,13 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         picker.dismissViewControllerAnimated(true, completion: nil)
-        println("Selected one image!")
+        NSLog("Selected one image!")
         saveImage(image)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
-        println("Clicked cancel button!")
+        NSLog("Clicked cancel button!")
 
     }
     
@@ -82,7 +82,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         let imgData = UIImageJPEGRepresentation(img, 1)
         
         photo.pImage = imgData
-        println("Image saved!")
+        NSLog("Image saved!")
         
     }
     
@@ -93,16 +93,16 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addPhotoCell", forIndexPath: indexPath) as! AddPhotoCell
             cell.addPhotoButton.tag = indexPath.row
             cell.addPhotoButton.addTarget(self, action: "getPhotoFromAlbum:", forControlEvents: .TouchUpInside)
-            println("A button cell is created!")
+            NSLog("A button cell is created!")
             return cell
         }
-            // Else, a photo cell.
+        // Else, a photo cell.
         else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoCell", forIndexPath: indexPath) as! PhotoCell
             let photo = photos[indexPath.row]
             cell.image?.contentMode = .ScaleAspectFit
             cell.image?.image = UIImage(data: photo.pImage)
-            println("A image cell is created!")
+            NSLog("A image cell is created!")
             return cell
         }
     }
@@ -110,6 +110,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // Return the number of rows in the section.
+        NSLog("%@ cells in the collection view!", numOfCell)
         return numOfCell
     }
     
@@ -120,17 +121,19 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+        itemName.delegate = self
+        itemPrice.delegate = self
+        note.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         // Load images from core data.
-        println("Start loading images...")
+        NSLog("Start loading images...")
         var error: NSError?
         let request = NSFetchRequest(entityName: "Photo")
         photos = moContext?.executeFetchRequest(request, error: &error) as! [Photo]
-        println("Loading finished!")
-        println(photos.count)
+        NSLog("Loading finished!")
         
         // Set variable numOfCell.
         numOfCell = photos.count+1
@@ -142,5 +145,14 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
