@@ -13,16 +13,18 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
     @IBAction func forgetPasswordBtn(sender: AnyObject) {
+        NSLog("forgetPassword Button clicked!")
     }
     
     @IBAction func signUpBtn(sender: AnyObject) {
+        NSLog("signUp Button clicked!")
     }
     
     @IBAction func loginBtn(sender: AnyObject) {
+        NSLog("Login Button clicked!")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

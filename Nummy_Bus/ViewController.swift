@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        var storyboard = UIStoryboard(name: "Photo", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("addNewItem") as! UIViewController
+        let storyboard = UIStoryboard(name: "Photo", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("addNewItem") 
         
         self.presentViewController(controller, animated: true, completion: nil)
     }

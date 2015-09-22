@@ -132,7 +132,7 @@ class PhotoViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         NSLog("Start loading images...")
         var error: NSError?
         let request = NSFetchRequest(entityName: "Photo")
-        photos = moContext?.executeFetchRequest(request, error: &error) as! [Photo]
+        photos = (try! moContext?.executeFetchRequest(request)) as! [Photo]
         NSLog("Loading finished!")
         
         // Set variable numOfCell.
@@ -147,7 +147,7 @@ class PhotoViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
